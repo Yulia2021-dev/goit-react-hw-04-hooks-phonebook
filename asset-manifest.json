@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/js/main.5b6b716e.chunk.js",
+    "main.js.map": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/js/main.5b6b716e.chunk.js.map",
+    "runtime-main.js": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/js/runtime-main.5b3329cc.js",
+    "runtime-main.js.map": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/js/runtime-main.5b3329cc.js.map",
+    "static/js/2.2c516730.chunk.js": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/js/2.2c516730.chunk.js",
+    "static/js/2.2c516730.chunk.js.map": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/js/2.2c516730.chunk.js.map",
+    "index.html": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.2c516730.chunk.js.LICENSE.txt": "/Yulia2021-dev/goit-react-hw-04-hooks-phonebook/static/js/2.2c516730.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5b3329cc.js",
+    "static/js/2.2c516730.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.5b6b716e.chunk.js"
+  ]
+}
