@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
+import "./ContactForm.css";
 
 const ContactForm = (props) => {
-  const { handleNameInput, handleNumberInput, addContact, name, number } = props;
+  const { handleNameInput, handleNumberInput, addContact, name, number } =
+    props;
   return (
     <form onSubmit={addContact}>
       <div className="mb-3">
-        <label htmlFor="name" className="form-label">Name</label>
+        <label htmlFor="name" className="form-label">
+          Name
+        </label>
         <input
           className="form-control"
           id="name"
@@ -16,11 +20,12 @@ const ContactForm = (props) => {
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
           onChange={handleNameInput}
-          
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="number" className="form-label">Number</label>
+        <label htmlFor="number" className="form-label">
+          Number
+        </label>
         <input
           className="form-control"
           id="number"
@@ -32,10 +37,10 @@ const ContactForm = (props) => {
           required
           onChange={handleNumberInput}
         />
-      </div>    
+      </div>
       <input type="submit" value="Add contact" className="btn btn-primary" />
     </form>
   );
-}
+};
 
 export default ContactForm;

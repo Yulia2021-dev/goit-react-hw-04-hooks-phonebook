@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Section = ({ title, children }) => {
   return (
     <div>
-      <h2 className="h2">{ title }</h2>
-        { children }
+      <h2 className="h2 mt-3">{title}</h2>
+      {children}
     </div>
-  )
-}
+  );
+};
 
 export default Section;
