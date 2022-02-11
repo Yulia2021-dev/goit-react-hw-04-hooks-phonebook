@@ -1,11 +1,31 @@
 import React from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
+import { v4 as uuid } from "uuid";
+
 import "./ContactForm.css";
 
-const ContactForm = (props) => {
-  const { handleNameInput, handleNumberInput, addContact, name, number } =
-    props;
+export default function ContactForm({ addContact }) {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+
+  const reset = () => {
+    setName("");
+    setNumber("");
+  };
+
+  const onChangeName = (e) => setName(e.target.value);
+  const onChangeNumber = (e) => setNumber(e.target.value);
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    const contact = { id: uuid(), name, number };
+    addContact(contact);
+    reset();
+  };
+
   return (
-    <form onSubmit={addContact}>
+    <form onSubmit={submitForm}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
@@ -19,7 +39,7 @@ const ContactForm = (props) => {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
-          onChange={handleNameInput}
+          onChange={onChangeName}
         />
       </div>
       <div className="mb-3">
@@ -35,12 +55,14 @@ const ContactForm = (props) => {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
           required
-          onChange={handleNumberInput}
+          onChange={onChangeNumber}
         />
       </div>
       <input type="submit" value="Add contact" className="btn btn-primary" />
     </form>
   );
-};
+}
 
-export default ContactForm;
+ContactForm.propTypes = {
+  addContact: PropTypes.func.isRequired,
+};
